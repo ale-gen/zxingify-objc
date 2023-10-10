@@ -9,7 +9,16 @@ let package = Package(
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
             name: "ZXingObjC",
+            targets: ["ZXingObjC"]
+        ),
+        .library(
+            name: "ZXingObjC-Dynamic",
             type: .dynamic,
+            targets: ["ZXingObjC"]
+        ),
+        .library(
+            name: "ZXingObjC-Static",
+            type: .static,
             targets: ["ZXingObjC"]
         ),
     ],
